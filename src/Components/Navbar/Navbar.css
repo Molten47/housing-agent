@@ -1,0 +1,109 @@
+:root {
+    --navbar-height: 60px;
+    --navbar-bg-color: #f0f0f0;
+    --navbar-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+    --nav-item-color: black;
+    --nav-item-gap: 3.25em;
+  }
+  
+  .navbar {
+    height: var(--navbar-height);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--navbar-bg-color);
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    box-shadow: var(--navbar-shadow);
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+  
+  .nav-logo {
+    flex: 1; /* Allow logo to take up available space */
+  }
+  
+  .nav-logo img {
+    max-width: 250px; /* Set a max-width for the logo */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .nav-side {
+    display: flex;
+    align-items: center;
+    gap: var(--nav-item-gap); /* Add gap between items */
+  }
+  
+  .nav-side ul {
+    display: flex;
+    list-style: none;
+    gap: var(--nav-item-gap);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-side ul li a {
+    color: var(--nav-item-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-side ul li a:hover {
+    text-decoration: underline ; /* Add hover effect */
+
+  }
+  
+  .nav-search {
+    flex: 1; /* Allow search to take up available space */
+    max-width: 200px; /* Limit search width */
+    position: relative;
+  }
+  
+  .nav-search input {
+    width: 100%;
+    padding: 8px 30px 10px 8px ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-logo img {
+      max-width: 100px; /* Smaller logo on smaller screens */
+    }
+
+    .nav-side {
+      gap: 1em; /* Reduce gap between items */
+    }
+
+    .nav-side ul {
+      gap: 1em; /* Reduce gap between list items */
+    }
+
+    .nav-search {
+      max-width: 150px; /* Reduce search bar width */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-logo img {
+      max-width: 80px; /* Even smaller logo on very small screens */
+    }
+
+    .nav-side ul {
+      display: none; /* Hide the list items on very small screens */
+    }
+
+    .nav-search {
+      max-width: 100px; /* Further reduce search bar width */
+    }
+  }

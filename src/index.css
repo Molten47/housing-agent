@@ -1,0 +1,13 @@
+@import "tailwindcss";
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  height: 100vh;
+  background: #f0f0f0;
+  color: white;
+  font-family: 'outfit';
+  overflow-y: scroll;
+}
